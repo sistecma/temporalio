@@ -22,23 +22,33 @@ A continuación levanta cada microservicio en una ventana/terminal nueva por cad
 Asumimos te encuentras en el directorio raiz llamado saga (cada vez que abras una nueva terminal para levantar cada microservicio)
 
 Levantar microservicio hotel
+
 cd hotel
+
 go run main.go
 
 Levantar microservicio vuelo
+
 cd vuelo
+
 go run main.go
 
 Levantar microservicio vehículo
+
 cd vehículo
+
 go run main.go
 
 Levantar microservicio orquestador viaje
+
 cd viaje
+
 go run main.go
 
 Ejecución de starter
+
 cd starter
+
 go run main.go
 
 Para ver el reverso de transacciones (y el funcionamiento de SAGA) puedes por ejemplo dejar subidos todos los microservicios a excepción de el de vuelo. Al ejecutar el starter notarás que después del tiempo definido como timeout en el código se aplicara reverso.
