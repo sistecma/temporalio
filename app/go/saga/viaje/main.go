@@ -21,8 +21,14 @@ func reservar(ctx workflow.Context) ([]int, error) {
 	// las opciones de actividad permiten configurar granularmente las actividades desde el punto de vista de Temporal
 	// timeouts cortos en duración por propósitos del ejercicio
 	aa := workflow.ActivityOptions{
-		StartToCloseTimeout:    time.Second * 3,
+		// tiempo máximo que puede transcurrir desde que un workflow solicite la ejecución de una actividad
+		// hasta que un worker inicie la ejecución de dicha actividad.
+		// Si se dispara este timeout es indicativo de que el/los workers que registran la actividad estan:
+		// o abajo o no pueden mantener la velocidad de despacho de tareas.
 		ScheduleToStartTimeout: time.Second * 3,
+
+		// tiempo máximo dentro del cual se puede ejecutar una tarea una vez que es tomada por un worker.
+		StartToCloseTimeout: time.Second * 3,
 	}
 
 	// inicializamos el contexto genérico y cargamos la opción de actividad general

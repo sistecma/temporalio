@@ -21,31 +21,31 @@ Primero asegúrate de tener temporal listo y corriendo. Puedes descargarte la ve
 A continuación levanta cada microservicio en una ventana/terminal nueva por cada uno. Al invocar el starter obtendrás el resultado (éxito o falla).
 Asumimos te encuentras en el directorio raiz llamado saga (cada vez que abras una nueva terminal para levantar cada microservicio)
 
-##### Levantar microservicio hotel
+### Levantar microservicio hotel
 
 cd hotel
 
 go run main.go
 
-##### Levantar microservicio vuelo
+### Levantar microservicio vuelo
 
 cd vuelo
 
 go run main.go
 
-##### Levantar microservicio vehículo
+### Levantar microservicio vehículo
 
 cd vehículo
 
 go run main.go
 
-##### Levantar microservicio orquestador viaje
+### Levantar microservicio orquestador viaje
 
 cd viaje
 
 go run main.go
 
-##### Ejecución de starter
+### Ejecución de starter
 
 cd starter
 

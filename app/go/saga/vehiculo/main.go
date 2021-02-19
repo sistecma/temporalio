@@ -4,6 +4,7 @@ import (
 	"context"
 	"log"
 	"math/rand"
+	"strconv"
 
 	"go.temporal.io/sdk/activity"
 	"go.temporal.io/sdk/client"
@@ -29,8 +30,8 @@ func cancelar(
 	id int) (int, error) {
 
 	logger := activity.GetLogger(ctx)
-	logger.Info("Cancelar vehiculo con nombre: " + nombre)
-	return rand.Int(), nil // número aleatorio que representa id de transacción ejecutada con éxito
+	logger.Info("Cancelar vehiculo con nombre: " + nombre + " id: " + strconv.Itoa(id)) // para este caso consideramos el print como transacción exitosa
+	return rand.Int(), nil                                                              // número aleatorio que representa id de transacción ejecutada con éxito
 }
 
 func main() {
