@@ -11,7 +11,7 @@ import (
 
 // workflow que implementa el patrón SAGA y la orquestación de los microservicios
 // retorna los ids resultados de cada microservicio.
-// La secuencia de números con los Ids de transacción id[0] es del hotel, id[1] es del vehiculo, id[2]
+// La secuencia de números con los Ids de transacción id[0] es del hotel, id[1] es del vehiculo, id[2] es del vuelo
 func reservar(ctx workflow.Context) ([]int, error) {
 
 	// definimos un logger para el workflow
