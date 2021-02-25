@@ -2,6 +2,7 @@ package com.sistecma.temporalio.saga.hotel;
 
 import io.temporal.activity.ActivityInterface;
 
+// interface para la actividad que sostiene la lógica de negocio de hotel
 @ActivityInterface
 public interface HotelI {
 	

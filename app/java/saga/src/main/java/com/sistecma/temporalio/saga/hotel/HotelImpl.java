@@ -2,7 +2,8 @@ package com.sistecma.temporalio.saga.hotel;
 
 import java.util.UUID;
 
-public class HotelImpl implements HotelI {
+//implementación de la lógica de negocio de hotel
+class HotelImpl implements HotelI {
 
 	@Override
 	public String reservar(String nombre) {

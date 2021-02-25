@@ -5,6 +5,7 @@ import org.springframework.context.support.AbstractApplicationContext;
 
 import io.temporal.worker.WorkerFactory;
 
+// Worker actuando como microservicio para la lógica de negocio de hotel
 public class HotelWorker {
 	
 
@@ -12,7 +13,8 @@ public class HotelWorker {
 		@SuppressWarnings("resource")
 		AbstractApplicationContext contexto = new AnnotationConfigApplicationContext(HotelConfig.class);	    
 		
-		WorkerFactory factory= (WorkerFactory) contexto.getBean("factory");
-		factory.start();
+		WorkerFactory fabrica= (WorkerFactory) contexto.getBean("fabricaHotel");
+		fabrica.start(); // arrancamos el servicio de hotel
+	
 	}
 }

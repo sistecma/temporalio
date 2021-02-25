@@ -1,4 +1,4 @@
-package com.sistecma.temporalio.saga.hotel;
+package com.sistecma.temporalio.saga.vehiculo;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -13,27 +13,27 @@ import io.temporal.worker.Worker;
 import io.temporal.worker.WorkerFactory;
 
 /*
- * Configuración de microservicio hotel
+ * Configuración de microservicio vehiculo
  */
 @Configuration
 @PropertySource("classpath:temporalio.properties") // accede a los properties
 @Import({ Config.class }) // importa la configuración Config.class del paquete común
-class HotelConfig {
+class VehiculoConfig {
 	
-	// bean worker fábrica para el microservicio hotel
+	// bean worker fábrica para el microservicio vehiculo
 	@Bean
-	public WorkerFactory fabricaHotel(@Value("${temporalio.taskqueue.hotel}") // trae el valor de temporalio.properties
-	                             String colaTareas, // identificador de la cola del microservicio hotel
+	public WorkerFactory factoryVehiculo(@Value("${temporalio.taskqueue.vehiculo}")// trae el valor de temporalio.properties
+	                             String colaTareas, // identificador de la cola del microservicio vehiculo
 			                     WorkflowClient cliente) { // trae como parámetro el bean WorkflowClient de Config.class
 
 		// el worker fábrica puede ser usado para crear workers
-	    WorkerFactory fabrica = WorkerFactory.newInstance(cliente);
+	    WorkerFactory factory = WorkerFactory.newInstance(cliente);
 
-	    // este es el worker que escucha la cola y hostea la lógica de negocio de hotel
-	    Worker worker = fabrica.newWorker(colaTareas);
-	    worker.registerActivitiesImplementations(new HotelImpl()); // registra la implementación de actividades al worker
+	    // este es el worker que escucha la cola y hostea la lógica de negocio de vehiculo
+	    Worker worker = factory.newWorker(colaTareas);
+	    worker.registerActivitiesImplementations(new VehiculoImpl()); // registra la implementación de actividades al worker
 	    	    
-	    return fabrica;
+	    return factory;
 	}
 
 	
