@@ -1,7 +1,7 @@
 # Ejemplo de uso de microservicios con Temporal y aplicación de patrón SAGA
 El ejemplo trata de una aplicación para la gestión de reservaciones de hotel, vuelo, y vehículo para los viajeros. 
 
-La implementación la realizaremos con Java con Spring Framework y Temporal. Si no sabes que es Temporal puedes revisar el siguiente link: [https://sistecma.github.io/2021/02/04/aplicaciones-invencibles-con-temporal.html](https://sistecma.github.io/2021/02/04/aplicaciones-invencibles-con-temporal.html)
+La implementación la realizaremos con Java, Spring Framework y Temporal. Si no sabes que es Temporal puedes revisar el siguiente link: [https://sistecma.github.io/2021/02/04/aplicaciones-invencibles-con-temporal.html](https://sistecma.github.io/2021/02/04/aplicaciones-invencibles-con-temporal.html)
 
 Asumiremos 4 microservicios: 
 
