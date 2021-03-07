@@ -24,7 +24,7 @@ Execute the example:
 
 If you are not familiar with Temporal, please follow this [link](https://temporal.io/)
 
-##3 README EN ESPANOL
+### README EN ESPANOL
 #### Ejemplo de microservicios con Temporal y Python
 En este ejemplo ilustramos como usar Temporal con python3 en una arquitectura de microservicios
 
