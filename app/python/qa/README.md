@@ -2,7 +2,7 @@
 
 ### README IN ENGLISH
 #### Example of microservice usage with Temporal and Python
-In this example we will illustrate how to use Temporal with python3 in a microservice architecture. 
+In this example we will illustrate how to use Temporal with python3 in a microservice architecture. If you are not familiar with Temporal, please follow this [link](https://temporal.io/)
 
 We define simple questions and answers as an application. We assume 3 microservices:
 
@@ -32,11 +32,9 @@ Execute the example:
 
 8- Execute: python3 starter.py
 
-If you are not familiar with Temporal, please follow this [link](https://temporal.io/)
-
 ### README EN ESPANOL
 #### Ejemplo de microservicios con Temporal y Python
-En este ejemplo ilustramos como usar Temporal con python3 en una arquitectura de microservicios
+En este ejemplo ilustramos como usar Temporal con python3 en una arquitectura de microservicios.Si no estas familiarizado con Temporal puedes seguir este enlace [link](https://temporal.io/) o visitar mi [blog](https://sistecma.github.io/)
 
 Definimos una simple aplicación llamada preguntas y respuestas (q&a). Para esto asumimos los siguientes microservicios:
 
@@ -66,5 +64,5 @@ Pasos para ejecutar el ejemplo:
 
 8- Ejecutar: python3 starter.py
 
-Si no estas familiarizado con Temporal puedes seguir este enlace [link](https://temporal.io/) o visitar mi [blog](https://sistecma.github.io/)
+
 
