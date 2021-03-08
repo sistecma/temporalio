@@ -4,7 +4,7 @@
 #### Example of microservice usage with Temporal and Python
 In this example we will illustrate how to use Temporal with python3 in a microservice architecture. 
 
-We define a simple questions and answers application. We assume 3 microservices:
+We define simple questions and answers as an application. We assume 3 microservices:
 
 Questions microservice- This is the microservice dealing with all the questions. The questions are just simple actitity methods and the worker registers all those activities
 
