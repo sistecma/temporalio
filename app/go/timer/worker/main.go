@@ -10,16 +10,16 @@ import (
 	"go.temporal.io/sdk/workflow"
 )
 
+// Worker configuration
 func main() {
-	// Para iniciar debes abrir un objeto client. Este es un objeto pesado
-	// Solo debes crear uno por proceso.
+
 	c, err := client.NewClient(client.Options{})
 	if err != nil {
-		log.Fatalln("No es posible crear el cliente", err)
+		log.Fatalln("It is not possible to create the client", err)
 	}
 	defer c.Close()
 
-	// creo el worker
+	// Create the worker
 	w := worker.New(c, "timer", worker.Options{}) // TaskQueue= timer
 
 	ow1 := workflow.RegisterOptions{
@@ -27,11 +27,11 @@ func main() {
 	}
 	w.RegisterWorkflowWithOptions(workflowf.Check, ow1)
 
-	// Ejecutar worker.
-	// Este es un proceso demonio.
+	// Execute the worker
+	// This is a daemon process
 	err = w.Run(worker.InterruptCh())
 	if err != nil {
-		log.Fatalln("No es posible ejecutar worker", err)
+		log.Fatalln("It is not possible to run the worker", err)
 	}
 
 }
