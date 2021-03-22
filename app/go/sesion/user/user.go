@@ -43,10 +43,14 @@ func UserWorkflow(ctx workflow.Context, state UserState) error {
 	}
 
 	// Ch to wait on completed event signals
+	logger.Info("before workflow.GetSignalChannel")
 	Ch := workflow.GetSignalChannel(ctx, SignalName)
+	logger.Info("after workflow.GetSignalChannel")
 	for i := 0; i < 5; i++ { // wait for 5 signals
 		var user UserEvent
+		logger.Info("before Ch.Receive")
 		Ch.Receive(ctx, &user)
+		logger.Info("after Ch.Receive")
 		logger.Info("User complete event received.", "ID", user.ID, "Total", user.Total)
 		state.Counter++ // counter of signals
 	}
