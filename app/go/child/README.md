@@ -13,5 +13,5 @@ go run child/worker/main.go
 ```
 3- Run the following command to start the example
 ```
-go run child/starter/main.go
+go run child/starter/main.go -name=Hernan
 ```
