@@ -9,9 +9,9 @@ To execute this example:
 1- You need a Temporal service running.
 2- Run the following command to start the worker
 ```
-go run child/worker/main.go
+go run child2/worker/main.go
 ```
 3- Run the following command to start the example
 ```
-go run child/starter/main.go -name=Hernan
+go run child2/starter/main.go -name=Hernan
 ```
