@@ -12,5 +12,5 @@ go run child/tpl/.
 ```
 3- Ejecutar el starter
 ```
-go run child/starter/main.go
+go run child/starter/.
 ```
