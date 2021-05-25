@@ -6,7 +6,7 @@ import (
 	"go.temporal.io/sdk/client"
 	"go.temporal.io/sdk/worker"
 
-	biz "child/biz"
+	biz "child2/biz"
 )
 
 func main() {

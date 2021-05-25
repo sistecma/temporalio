@@ -4,7 +4,7 @@ import (
 	"context"
 	"log"
 
-	biz "child/biz"
+	biz "child2/biz"
 	"flag"
 
 	"github.com/pborman/uuid"
