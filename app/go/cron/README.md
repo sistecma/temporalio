@@ -13,3 +13,6 @@ go run cron/worker/main.go
 go run cron/starter/main.go
 ```
 
+El starter contiene la linea (ver abajo) que configura el cron:
+CronSchedule: "* * * * *"
+
